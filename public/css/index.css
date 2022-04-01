@@ -1,0 +1,65 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+section {
+    padding: 10px;
+}
+.bejegyzes,
+.fejlec {
+    border: 1px solid gray;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100px 220px 50px auto;
+}
+.fejlec {
+    font-weight: bold;
+    background-color: lightgray;
+}
+.bejegyzes:nth-child(odd) {
+    background-color: rgb(231, 228, 228);
+}
+section form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px;
+    grid-gap: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+#bejelentkezes a {
+    text-decoration: none;
+    color: lightslategray;
+}
+#bejelentkezes a:hover {
+    text-decoration: none;
+    color: lightskyblue;
+}
+@media screen and (max-width: 500px) {
+    #container {
+        width: 100%;
+    }
+    section form fieldset {
+        grid-template-columns: 1fr;
+    }
+    .bejegyzes {
+        border: 1px solid gray;
+        padding: 10px;
+        color:rgb(19, 110, 19);
+        display: grid;
+        grid-template-columns: 120px auto;
+    }
+    .bejegyzes .pontszam::before {
+        content: "Pontérték: ";
+    }
+    .fejlec {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    #container {
+        width: 100%;
+    }
+}
